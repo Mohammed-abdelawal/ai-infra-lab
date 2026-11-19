@@ -1,0 +1,48 @@
+# Secrets: never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.vast_api_key
+hf_token*
+
+# Model weights and adapters: pull from Hugging Face, don't store in git
+models/
+checkpoints/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# Private or bulky data
+data/private/
+*.wav
+*.mp3
+*.flac
+!samples/**/*.wav
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Go
+bin/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Personal drafts (LinkedIn posts etc.), edited before posting
+drafts/
